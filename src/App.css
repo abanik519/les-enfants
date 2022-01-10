@@ -1,6 +1,11 @@
+@font-face {
+  font-family: "mainText";
+  src: url("COMIC.TTF");
+}
+
 body{
   background-color: rgba(250, 235, 215, 0.5);
-  overflow: hidden;
+  font-family: "mainText";
 }
 
 .phoneText{
@@ -30,7 +35,7 @@ body{
   to {opacity: 1}
 }
 
-@media (min-width:481px)  {
+@media only screen and (min-width:641px) {
   /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
   .slideshow-container{
       display: flex;
@@ -47,21 +52,23 @@ body{
 
   .title{
       font-size: 2em;
-      width: 100vw;
+      width: 100%;
       flex-basis: 15%;
       display: flex;
       justify-content: center;
       align-items: center;
       font-weight: bold;
       position: relative;
-      padding: 10px;
+      padding: 10px 0 10px 0;
       text-align: center;
       text-decoration: overline underline gray;
+      transform: translateY(5em);
   }  
 
   .slide-container{
       display: flex;
       flex-direction: row;
+      justify-content: space-evenly;
       flex-basis: 85%;
       width: 100%;
   }
@@ -70,34 +77,37 @@ body{
       display: none;
       flex-basis: 80%;
       width: 20em;
+      height: 45em;
       flex-direction: row;
       position: relative;
   }
 
   .image-container{
-      flex-basis: 60%;
-      width: 15em;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      flex-direction: row;
-      position: relative;
+    flex-basis: 60%;
+    width: 15em;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
   }
 
   .image{
-      width: 12em;
-      height: fit-content;
+      width: 15em;
+      height: auto;
   }
 
   .avatar-container{
       display: flex;
       justify-content: flex-start;
+      align-items: center;
   }
 
   .avatar{
       width: 3em;
       height: auto;
-      transform: translateY(-4.5em);
+      transform: translateY(-6em);
   }
 
   .input-container{
@@ -142,7 +152,8 @@ body{
   }
 
   p{
-      font-size: 1em;
+    font-size: 1em;
+    margin: 0;
   }
 
   .speech{
@@ -249,9 +260,10 @@ body{
 
   .question-container{
       display: flex;
+      flex-basis: 100%;
       width: 100%;
       flex-direction: column;
-      justify-content: start;
+      justify-content: center;
   }
 
   .question-title{
@@ -266,11 +278,11 @@ body{
   }
 
   .question-option:hover{
-      font-weight: bold;
-  }
+    cursor: pointer;
+}
 
 }
-@media (min-width:641px)  { 
+@media only screen and (min-width:641px) and (orientation: landscape)  { 
   /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
   .phoneText{
       font-size: 1em;
@@ -279,10 +291,12 @@ body{
   .title{
       font-size: 2.5em;
       padding: 30px;
+      transform: translateY(0);
   }  
 
   .slide{
       width: 30em;
+      height: auto;
   }
 
   .image-container{
@@ -294,7 +308,7 @@ body{
   }
 
   .avatar-container{
-      transform: translateY(-2.5em);
+      transform: translateY(-1em);
   }
 
   .avatar{
@@ -337,13 +351,10 @@ body{
       transform: translate(11.5em, -2em);
   }
     
-
-
   .arrow-container{
       flex-basis: 10%;
       width: 5em;
   }
-
   .next {
       padding: .2em;
       font-size: 2em;
@@ -353,8 +364,18 @@ body{
   .next:hover {
       background-color: rgba(0,0,0,0.8);
   }
+  .question-title{
+    font-size: 1.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .question{
+      font-size: 1.3em;
+  }
 }
-@media (min-width:961px)  { 
+@media only screen and (min-width:961px)  { 
   /* tablet, landscape iPad, lo-res laptops ands desktops */ 
   .title{
       font-size: 3.5em;
@@ -374,7 +395,7 @@ body{
   }
 
   .avatar-container{
-      transform: translateY(-5.5em);
+      transform: translateY(-4em);
   }
 
   .avatar{
@@ -412,7 +433,7 @@ body{
       padding: 1em;
       font-weight: 700;
       font-size: 1.4em;
-      transform: translate(11em, -2em);
+      transform: translate(11em, 0em);
   }
     
   .arrow-container{
@@ -421,15 +442,29 @@ body{
 
   .next {
       padding: .2em;
-      font-size: 2em;
+      font-size: 2.5em;
       border-radius: 0 3px 3px 0;
       margin: .5em;
   }
   .next:hover {
       background-color: rgba(0,0,0,0.8);
   }
+  .question-title{
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .question{
+      font-size: 1.7em;
+  }
+
+  .question-box{
+    margin: 7px 0 7px 0;
+  }
 }
-@media (min-width: 1025px) {
+@media only screen and (min-width: 1025px) {
   /* big landscape tablets, laptops, and desktops */
   .title{
       font-size: 3.5em;
@@ -448,7 +483,7 @@ body{
   }
 
   .avatar-container{
-      transform: translateY(-5.5em);
+      transform: translateY(-4em);
   }
 
   .avatar{
@@ -486,7 +521,7 @@ body{
       padding: 1em;
       font-weight: 700;
       font-size: 1.6em;
-      transform: translate(11em, -1.5em);
+      transform: translate(11em, .5em);
   }
 
   .sb1:before {
@@ -516,9 +551,23 @@ body{
   .next:hover {
       background-color: rgba(0,0,0,0.8);
   }
+  .question-title{
+    font-size: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .question{
+      font-size: 2em;
+  }
+
+  .question-box{
+    margin: 7px 0 7px 0;
+  }
   
 }
-@media (min-width:1440px) { 
+@media only screen and (min-width:1440px) { 
   /* Large moniters */
   .title{
       font-size: 4em;
@@ -537,7 +586,7 @@ body{
   }
 
   .avatar-container{
-      transform: translateY(-12.5em);
+      transform: translateY(-11em);
   }
 
   .avatar{
@@ -575,7 +624,7 @@ body{
       padding: 1em;
       font-weight: 700;
       font-size: 2em;
-      transform: translate(14.5em, -4.5em);
+      transform: translate(15em, -4em);
   }
     
   .arrow-container{
@@ -590,5 +639,20 @@ body{
   }
   .next:hover {
       background-color: rgba(0,0,0,0.8);
+  }
+
+  .question-title{
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .question{
+      font-size: 2.7em;
+  }
+
+  .question-box{
+    margin: 7px 0 7px 0;
   }
 }
