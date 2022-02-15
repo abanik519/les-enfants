@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/les-enfants/static/css/main.9c0b1f94.css",
-    "main.js": "/les-enfants/static/js/main.c79aea5c.js",
+    "main.js": "/les-enfants/static/js/main.e5d39bc3.js",
     "static/js/787.c3a81844.chunk.js": "/les-enfants/static/js/787.c3a81844.chunk.js",
-    "static/media/Media1.mp3": "/les-enfants/static/media/Media1.c0ac306e091b0ea430ff.mp3",
-    "static/media/Media2.mp3": "/les-enfants/static/media/Media2.6ec6573a36e50a51e0a7.mp3",
+    "static/media/end.mp3": "/les-enfants/static/media/end.54fe40dd29edad37b55e.mp3",
+    "static/media/intro.mp3": "/les-enfants/static/media/intro.d20119e5897d7f32ed92.mp3",
     "static/media/Century Gothic.ttf": "/les-enfants/static/media/Century Gothic.b194aa2bd524e2c973f7.ttf",
     "static/media/04.jpg": "/les-enfants/static/media/04.a62f625a6db35e2bd68d.jpg",
     "static/media/07.jpg": "/les-enfants/static/media/07.4a9fd178135b3f3e894c.jpg",
@@ -20,11 +20,11 @@
     "static/media/08.jpg": "/les-enfants/static/media/08.e3d25ec68351dcddc621.jpg",
     "index.html": "/les-enfants/index.html",
     "main.9c0b1f94.css.map": "/les-enfants/static/css/main.9c0b1f94.css.map",
-    "main.c79aea5c.js.map": "/les-enfants/static/js/main.c79aea5c.js.map",
+    "main.e5d39bc3.js.map": "/les-enfants/static/js/main.e5d39bc3.js.map",
     "787.c3a81844.chunk.js.map": "/les-enfants/static/js/787.c3a81844.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9c0b1f94.css",
-    "static/js/main.c79aea5c.js"
+    "static/js/main.e5d39bc3.js"
   ]
 }
